@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<h2>Login</h2>
+{% with messages = get_flashed_messages() %} 
+	{% if messages %}
+	<div class="alert alert-danger">{{ messages[0] }}</div>
+	{% endif %}
+{% endwith %}
+<form method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.email.label }} 
+	{{ form.email(class="form-control") }} 
+	{% for error in form.email.errors %}
+    <div style="color:red;">{{ error }}</div>
+    {% endfor %}
+  </div>
+  <div class="form-group">
+    {{ form.password.label }} 
+	{{ form.password(class="form-control") }} 
+	{% for error in form.password.errors %}
+    <div style="color:red;">{{ error }}</div>
+    {% endfor %}
+  </div>
+  {{ form.submit(class="btn btn-primary float-right btn-block") }}
+</form>
+{% endblock content %}

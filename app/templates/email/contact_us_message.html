@@ -1,0 +1,7 @@
+<h2>Contact Us Message</h2>
+<p>Subject: <strong>{{ subject }}</strong></p>
+<p>From: <strong>{{ user_name }} ({{ user_email }})</strong></p>
+<p>Order ID: {% if order_id %}{{ order_id }}{% else %}n/a{% endif %}</p>
+<p>
+  Message: {{ message }}
+</p>

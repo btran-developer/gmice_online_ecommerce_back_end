@@ -1,0 +1,9 @@
+Contact Us Message
+
+Subject: {{ sbuject }}
+
+From: {{ user_name }} ({{ user_email }})
+
+Order ID: {% if order_id %}{{ order_id }}{% else %}n/a{% endif %}
+
+Message: {{ message }}

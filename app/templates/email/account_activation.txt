@@ -1,0 +1,1 @@
+Please click the link to confrim your activate your account {{ link }}

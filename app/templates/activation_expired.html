@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block title %}{{ title }}{% endblock title %} {%
+block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Activation Link Expired!</h1>
+  <hr class="my-4" />
+  <p>Click <a href="{{ new_link }}">here</a> to resend.</p>
+</div>
+{% endblock content %}
